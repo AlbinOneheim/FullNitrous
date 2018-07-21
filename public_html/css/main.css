@@ -1,5 +1,175 @@
 body
 {
 	padding: 0;
-	margin: 0;
+  margin: 0;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+.wrapper
+{
+	margin: auto;
+  width: 50%;
+  padding-right: 25%;
+  padding-left: 25%;
+  overflow: visible;
+}
+
+header
+{
+  margin-top: 60px;
+}
+
+header img
+{
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+}
+
+header h1
+{
+  font-size: 50px;
+}
+p 
+{
+  color: grey;
+}
+
+main
+{
+  padding-bottom: 500px;
+}
+
+a
+{
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.links
+{
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  margin-top: 30px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.links li
+{
+  width: calc(100% / 4);
+  float: left;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 3px transparent solid;
+  transition: border-bottom 300ms ease-in-out;
+}
+
+.links li:hover
+{
+  border-bottom: 3px black solid;
+}
+
+.links img
+{
+  border-radius: 0;
+  height: 3em;
+  width: auto;
+}
+
+.right
+{
+  padding-left: 40px;
+  width: calc(100% - 250px - 40px);
+  float: right;
+}
+
+h2
+{
+  margin-top: 40px;
+}
+
+.collapse
+{
+  padding-top: 10px;
+}
+
+.collapse .face
+{
+  background-color: whitesmoke;
+  border: 1px #d0d0d0 solid;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.collapse .content
+{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.collapse .face:hover
+{
+  text-decoration: underline;
+}
+
+.hidden
+{
+  display: none;
+}
+
+.project
+{
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.project img
+{
+  width: 2em;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.project span
+{
+  vertical-align: middle;
+}
+
+.project a 
+{
+  float: right;
+  padding-left: 10px;
+}
+
+.popup
+{
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.popup .content
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background: whitesmoke;
+  border-radius: 5px;
+}
+
+.inactive
+{
+  pointer-events: none;
+  opacity: 0;
 }
