@@ -1,2 +1,2 @@
-# fullnitrousxyz
-personal xyz site
+# FullNitrous
+personal website
