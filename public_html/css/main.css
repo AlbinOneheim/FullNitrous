@@ -3,15 +3,35 @@ body
 	padding: 0;
   margin: 0;
   font-family: "Lucida Console", Monaco, monospace;
+  min-width: 400px;
 }
 
 .wrapper
 {
 	margin: auto;
-  width: 50%;
-  padding-right: 25%;
-  padding-left: 25%;
-  overflow: visible;
+  width: 900px;
+}
+
+@media screen and (max-width: 950px)
+{
+  .wrapper
+  {
+    margin: auto;
+    width: 90%;
+  }
+  .right
+  {
+    padding-left: 0 !important;
+    width: 100% !important;
+    float: none !important;
+  }
+  header #pfp
+  {
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+    z-index: -10000;
+  }
 }
 
 header
@@ -102,7 +122,6 @@ h2
   border: 1px #d0d0d0 solid;
   border-radius: 5px;
   padding: 10px;
-  cursor: pointer;
 }
 
 .collapse .content
@@ -111,9 +130,28 @@ h2
   margin-left: 20px;
 }
 
-.collapse .face:hover
+.collapse .face span
+{
+  cursor: pointer;
+}
+
+.collapse .face a
+{
+  position: relative;
+  float: right;
+  padding-left: 10px;
+}
+
+.collapse .face span:hover
 {
   text-decoration: underline;
+}
+
+.collapse .face img
+{
+  width: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .hidden
@@ -121,35 +159,10 @@ h2
   display: none;
 }
 
-.project
-{
-  margin-top: 20px;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.project img
-{
-  width: 2em;
-  vertical-align: middle;
-  display: inline-block;
-}
-
-.project span
-{
-  vertical-align: middle;
-}
-
-.project a 
-{
-  float: right;
-  padding-left: 10px;
-}
-
 .popup
 {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;

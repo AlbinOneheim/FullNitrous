@@ -2,7 +2,7 @@ function setupCollapse()
 {
   var toggleCollapse = function()
   {
-    var content = this.parentNode.querySelector(".content");
+    var content = this.parentNode.parentNode.querySelector(".content");
     if(content.classList.contains("hidden"))
     {
       content.classList.remove("hidden");
@@ -13,7 +13,7 @@ function setupCollapse()
     }
   }
 
-  var elements = document.querySelectorAll(".collapse .face");
+  var elements = document.querySelectorAll(".collapse .face span");
   for(var i = 0; i < elements.length; i++)
   {
     elements[i].addEventListener("click", toggleCollapse, false);
