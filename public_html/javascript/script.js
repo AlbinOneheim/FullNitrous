@@ -69,6 +69,64 @@ function setupTextPopup()
   closePopupBtn.addEventListener("click", closePopup);
 }
 
+function setupPfpMeme()
+{
+  var flipPfp = function()
+  {
+    document.getElementById("back").classList.remove("flip");
+    this.classList.add("flip");
+  }
+
+  var flipBack = function()
+  {
+    document.getElementById("pfp").classList.remove("flip");
+    this.classList.add("flip");
+  }
+
+  var pfp = document.getElementById("pfp");
+  var back = document.getElementById("back");
+  pfp.addEventListener("click", flipPfp, false);
+  back.addEventListener("click", flipBack, false);
+}
+
+function probabilityRNG() 
+{
+  var set = [100, 10, 40, 50, 150, 100, 300, 100, 100, 250, 100, 150, 150, 50, 20, 100, 90, 88, 34];
+  var index = Math.floor(Math.random() * set.length);
+  return set[index];
+}
+
+
+function fakeType(h1e, pe, h1, p)
+{
+  if(h1.length != 0)
+  {
+    h1e.innerHTML += h1[0];
+    h1 = h1.slice(1);
+    var time = probabilityRNG();
+    setTimeout(fakeType.bind(null, h1e, pe, h1, p), time);
+  }
+  else if(p.length != 0)
+  {
+    if(p[0] == "\n")
+    {
+      pe.innerHTML += "<br>"
+    }
+    else
+    {
+      pe.innerHTML += p[0];
+    }
+    p = p.slice(1);
+    var time = probabilityRNG();
+    setTimeout(fakeType.bind(null, h1e, pe, h1, p), time);
+  }
+}
+
 setupTextPopup();
 setupCollapse();
 setupMoreText();
+setupPfpMeme();
+fakeType(document.querySelector(".right h1"), 
+         document.querySelector(".right p"), 
+         "Full_Nitrous", 
+         "Honestly, managing memory is better than jerking off.\n\n-anime pic cunt");
