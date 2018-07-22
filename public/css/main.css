@@ -1,0 +1,229 @@
+body
+{
+	padding: 0;
+  margin: 0;
+  font-family: "Lucida Console", Monaco, monospace;
+  min-width: 400px;
+}
+
+.wrapper
+{
+	margin: auto;
+  width: 900px;
+}
+
+@media screen and (max-width: 950px)
+{
+  .wrapper
+  {
+    margin: auto;
+    width: 90%;
+  }
+  .right
+  {
+    padding-left: 0 !important;
+    width: 100% !important;
+    float: none !important;
+  }
+  #pfp-container
+  {
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+    z-index: -10000;
+  }
+}
+
+header
+{
+  margin-top: 60px;
+}
+
+#pfp-container
+{
+  height: 250px;
+  width: 250px;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+#pfp-container #pfp, #back
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 100%;
+  transition: transform 500ms ease-in-out;
+}
+
+#back
+{
+  height: calc(100% - 2px);
+  width: calc(100% - 2px);
+  background-color: whitesmoke;
+  border: 1px #d0d0d0 solid;
+}
+
+#back span 
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#pfp
+{
+  backface-visibility: hidden;
+  z-index: 10;
+}
+
+header h1
+{
+  font-size: 50px;
+}
+p 
+{
+  color: grey;
+}
+
+main
+{
+  padding-bottom: 500px;
+}
+
+a
+{
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.links
+{
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  margin-top: 30px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.links li
+{
+  width: calc(100% / 4);
+  float: left;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 3px transparent solid;
+  transition: border-bottom 300ms ease-in-out;
+}
+
+.links li:hover
+{
+  border-bottom: 3px black solid;
+}
+
+.links img
+{
+  border-radius: 0;
+  height: 3em;
+  width: auto;
+}
+
+.right
+{
+  padding-left: 40px;
+  width: calc(100% - 250px - 40px);
+  float: right;
+}
+
+h2
+{
+  margin-top: 40px;
+}
+
+.collapse
+{
+  padding-top: 10px;
+}
+
+.collapse .face
+{
+  background-color: whitesmoke;
+  border: 1px #d0d0d0 solid;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.collapse .content
+{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.collapse .face span
+{
+  cursor: pointer;
+}
+
+.collapse .face a
+{
+  position: relative;
+  float: right;
+  padding-left: 10px;
+}
+
+.collapse .face span:hover
+{
+  text-decoration: underline;
+}
+
+.collapse .face img
+{
+  width: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.hidden
+{
+  display: none;
+}
+
+.popup
+{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.popup .content
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background: whitesmoke;
+  border-radius: 5px;
+}
+
+.inactive
+{
+  pointer-events: none;
+  opacity: 0;
+}
+
+.flip
+{
+  transform: rotateY(180deg);
+}
