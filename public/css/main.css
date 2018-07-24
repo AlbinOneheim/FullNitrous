@@ -227,3 +227,64 @@ h2
 {
   transform: rotateY(180deg);
 }
+
+@media screen and (max-width: 950px)
+{
+  .showoff-img-container
+  { 
+    height: 30vh !important;
+  }
+  .showoff
+  {
+    height: 30vh !important;
+  }
+}
+
+.showoff-img-container
+{ 
+  position: relative;
+  overflow: hidden;
+  height: 50vh;
+}
+
+.showoff-img-container img
+{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  border-radius: 5px;
+}
+
+.showoff
+{
+  width: 100%;
+  border-radius: 5px;
+  margin: 10px 0;
+  max-height: 50vh;
+}
+
+.download-section
+{
+  padding: 10px 0;
+  height: 40px;
+  width: 100%;
+}
+
+.download-section img 
+{
+  height: 100%;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.download-section a
+{
+  float: right;
+}
+
+.download-section span, .download-section a 
+{
+  line-height: 40px;
+}
