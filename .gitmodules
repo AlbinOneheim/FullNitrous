@@ -1,3 +1,6 @@
 [submodule "Assets"]
 	path = Assets
 	url = https://github.com/FullNitrous/Assets
+[submodule "public/assets/zondicons"]
+	path = public/assets/zondicons
+	url = https://www.github.com/FullNitrous/zondicons
